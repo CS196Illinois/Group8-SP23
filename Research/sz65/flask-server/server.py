@@ -12,17 +12,17 @@ def members():
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
 
-@app.route("/add", methods=["POST"], strict_slashes=False)
-def add_articles():
-    title = request.json['title']
-    body = request.json['body']
+# @app.route("/add", methods=["POST"], strict_slashes=False)
+# def add_articles():
+#     title = request.json['title']
+#     body = request.json['body']
 
-    article = Articles(
-        title=title,
-        body=body
-        )
+#     article = Articles(
+#         title=title,
+#         body=body
+#         )
 
-    db.session.add(article)
-    db.session.commit()
+#     db.session.add(article)
+#     db.session.commit()
 
-    return article_schema.jsonify(article)
+#     return article_schema.jsonify(article)
