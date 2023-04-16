@@ -25,7 +25,8 @@ def postForm():
     if request.method == 'POST':
         # request.setHeader()
         request_data = json.loads(request.data)
-        return request_data['userId']
+
+        return request_data
     else:
         return {"blah": ""}
     

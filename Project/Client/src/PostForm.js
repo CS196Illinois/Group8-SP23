@@ -19,30 +19,15 @@ class PostForm extends Component {
     submitHandler = async(e) => {
         e.preventDefault()
         console.log(this.state)
-        
-        // var config = await fetch('postForm', {
-        //     method: "POST",
-        //     url: "http://localhost:8000/postForm",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //     },
-        //     data: this.state
-        // })
         axios.post('http://localhost:8000/postForm', this.state)
         .then(response => {
+            console.log(response)
             alert(response)
         })
         .catch(error => {
             console.log(error)
         }
         )
-        // // axios(config)
-        // .them(function (response) {
-        //     console.log(JSON.stringify(response.data))
-        // })
-        // .catch(function (error) {
-        //     console.log(error)
-        // });
     }
 
     render() {
