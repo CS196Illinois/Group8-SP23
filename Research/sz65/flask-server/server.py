@@ -19,21 +19,15 @@ def mainpage():
 def posttest():
     request_data = json.loads(request.data)
     return request_data['age']
+
+@app.route("/postForm", methods=['POST', 'GET'])
+def postForm():
+    if request.method == 'POST':
+        # request.setHeader()
+        request_data = json.loads(request.data)
+        return request_data['userId']
+    else:
+        return {"blah": ""}
     
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
-
-# @app.route("/add", methods=["POST"], strict_slashes=False)
-# def add_articles():
-#     title = request.json['title']
-#     body = request.json['body']
-
-#     article = Articles(
-#         title=title,
-#         body=body
-#         )
-
-#     db.session.add(article)
-#     db.session.commit()
-
-#     return article_schema.jsonify(article)
