@@ -1,26 +1,32 @@
 import math
 # Simple Intert
 def simple_interest(p, r, t):
-    print('Amount: ', p)
-    print("Rate of Interest (Per Annum)", r)
-    print("Time (In Years): ",t)
+    # print("-------Explaination--------")
+    # print()
+    # print('Amount: ', p)
+    # print("Rate of Interest (Per Annum)", r)
+    # print("Time (In Years): ",t)
+    # print("Final Amount: ", a)
+    # print("Simple Interest: ", si)
     si=(p*r*t)/100
     a= p+si
-    print("Final Amount: ", a)
-    print("Simple Interest: ", si)
+    return a
 
 # compound interest
 def compound_interest(p,r,t):
-    print('Amount: ', p)
-    print("Rate of Interest (Per Annum)", r)
-    print("Time (In Years): ",t)
+    # print('Amount: ', p)
+    # print("Rate of Interest (Per Annum)", r)
+    # print("Time (In Years): ",t)
+    # a= p*((1+r/100)**t)
+    # ci= a-p
+    # print("Final Amount: ", a)
+    # print("Compound Interest: ", ci)
     a= p*((1+r/100)**t)
     ci= a-p
-    print("Final Amount: ", a)
-    print("Compound Interest: ", ci)
+    return a;
 
 # compound annual growth rate
-def CAGR(p,a, t ):
+def CAGR(p, a, t):
     print("Initial value of money: ",p)
     print('Final value of money: ',a)
     print("Time in years: ", t)

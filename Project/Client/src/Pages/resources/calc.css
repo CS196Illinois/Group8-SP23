@@ -1,14 +1,12 @@
-.LoanCalculator {
+.render {
   content: "";
 }
-.LoanCalculator::after {
+.render::after {
 
   content: "";
   
-  background: url('resources/uiuc.jpg');
-
-
-  opacity: 0.2;
+  background: url('uiuc.jpg');
+  opacity: 1;
   top: 0;
   left: 0;
   bottom: 0;

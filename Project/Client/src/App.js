@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
-import LoanCalculator from './LoanCalculator';
-import PostForm from "./PostForm";
+import LoanCalculator from './Pages/LoanCalculator';
+import PostForm from "./Pages/PostForm";
 
 function App() {
   
@@ -20,18 +20,8 @@ function App() {
   return (
       <div>
       <PostForm />
-      <LoanCalculator />
-
-      
-        {/* {(typeof data.members == 'undefined') ? (
-          <p>Loading...</p>
-        ): 
-        (
-          data.members.map((member, i) => (
-            <p key = {i}> {member}</p>
-          ))
-        )
-        } */}
+      {/* <LoanCalculator /> */}
+      {}
         </div>
   )
 }
