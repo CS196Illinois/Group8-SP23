@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import LoanCalculator from './Pages/LoanCalculator';
+// import LoanCalculator from './Pages/LoanCalculator';
 import PostForm from "./Pages/PostForm";
 
 function App() {
