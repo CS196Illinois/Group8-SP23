@@ -1,14 +1,8 @@
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: #D9D7DD;
-  }
+
   
   .clock {
-    margin-top: 10rem;
-    float: right;
+    /* margin-top: 10rem; */
+    margin-left: 25rem;
     border-radius: 100%;
     background: #ffffff;
     font-family: "Montserrat";
@@ -19,18 +13,18 @@ body {
   .wrap {
     overflow: hidden;
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 175px;
+    height: 175px;
     border-radius: 100%;
   }
   
   .minute,
   .hour {
     position: absolute;
-    height: 100px;
-    width: 6px;
+    height: 70px;
+    width: 5px;
     margin: auto;
-    top: -27%;
+    top: -40%;
     left: 0;
     bottom: 0;
     right: 0;
@@ -43,9 +37,9 @@ body {
   
   .minute {
     position: absolute;
-    height: 130px;
-    width: 4px;
-    top: -38%;
+    height: 80px;
+    width: 3px;
+    top: -44%;
     left: 0;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
     transform: rotate(90deg);
@@ -53,10 +47,10 @@ body {
   
   .second {
     position: absolute;
-    height: 90px;
+    height: 85px;
     width: 2px;
     margin: auto;
-    top: -26%;
+    top: -48%;
     left: 0;
     bottom: 0;
     right: 0;

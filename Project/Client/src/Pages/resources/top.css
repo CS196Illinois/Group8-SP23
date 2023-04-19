@@ -1,13 +1,8 @@
-/* body{
-  background: rgb(8, 144, 110);
-  font-family: sans-serif;
-} */
-
 .top{
   /* 设置宽度高度背景颜色 */
   height: 5%; /*高度改为自动高度*/
   width:100%;
-  margin-left: 0;
+  margin-left: 15%;
   background:rgb(184, 209, 203);
   position: fixed; /*固定在顶部*/
   top: 0;/*离顶部的距离为0*/

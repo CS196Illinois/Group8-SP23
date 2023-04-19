@@ -68,22 +68,14 @@ class PostForm extends Component {
     render() {
         const { p, r, t, type } = this.state;
         return (
-
             <div className='pic'
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                 }}>
-                <div class="clock" >
-                        <div class="wrap">
-                            <span class="hour"></span>
-                            <span class="minute"></span>
-                            <span class="second"></span>
-                            <span class="dot"></span>
-                        </div>
-                </div>
-                
+
+                {/*Top Bar */}
                 <div class="top">
                     <center>
                         <ul>
@@ -101,28 +93,45 @@ class PostForm extends Component {
                         </ul>
                     </center>
                 </div>
-                
-                {/* <div style={{ float: 'left', width: '50%',}}> */}
-                    <h1 style={{ fontFamily: 'Arial', fontSize: '4rem', marginBottom: '2rem', marginTop: '1rem' }}>Interest Calculator</h1>
-                    <div className="container">
-                        <form onSubmit={this.submitHandler} style={{ fontSize: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                            <label className="label">Deposit:</label>
-                            <input type="text" name="p" value={p} onChange={this.changeHandler} style={{ width: '300px' }} />
-                            <label className="label">Interest Rate:</label>
-                            <input type="text" name="r" value={r} onChange={this.changeHandler} style={{ width: '300px' }} />
-                            <label className="label">Deposit Time:</label>
-                            <input type="text" name="t" value={t} onChange={this.changeHandler} style={{ width: '300px' }} />
-                            <label className="label">Deposit Type:</label>
-                            <input type="text" name="type" value={type} onChange={this.changeHandler} style={{ width: '300px' }} />
-                            <button type="submit" style={{ fontFamily: 'Arial', marginTop: '1rem', width: '200px', padding: '0.5rem 1rem' }}>
-                                Calculate
-                            </button>
-                        </form>
-                    </div>
 
-                    <h3 style={{ marginTop: '2rem' }}>
-                        Total Amount: <span>{this.state.interest}</span>
-                    </h3>
+                
+
+
+                {/*form feature */}
+                {/* <div style={{ float: 'left'}}> */}
+                <div className="container">
+                    {/*clock feature */}
+                    
+                    <form onSubmit={this.submitHandler} className="label">
+                        <h1 className="header">Interest Calculator</h1>
+                        <label className="label">Deposit:</label>
+                        <input type="text" name="p" value={p} onChange={this.changeHandler} style={{ width: '300px' }} />
+                        <label className="label">Interest Rate:</label>
+                        <input type="text" name="r" value={r} onChange={this.changeHandler} style={{ width: '300px' }} />
+                        <label className="label">Deposit Time:</label>
+                        <input type="text" name="t" value={t} onChange={this.changeHandler} style={{ width: '300px' }} />
+                        <label className="label">Deposit Type:</label>
+                        <input type="text" name="type" value={type} onChange={this.changeHandler} style={{ width: '300px' }} />
+                        <button type="submit" style={{ fontFamily: 'Arial', marginTop: '1rem', width: '200px', padding: '0.5rem 1rem' }}>
+                            Calculate
+                        </button>
+                        <h3 style={{ marginTop: '2rem' }}>
+                            Total Amount: <span>{this.state.interest}</span>
+                        </h3>
+                    </form>
+                    <div class="clock">
+                        <div class="wrap">
+                            <span class="hour"></span>
+                            <span class="minute"></span>
+                            <span class="second"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+
+               
+
+                
                 {/* </div> */}
             </div>
         );
