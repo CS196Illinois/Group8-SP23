@@ -57,7 +57,14 @@ class PostForm extends Component {
         axios.post('http://localhost:8000/interestCalculation', this.state)
             .then(response => {
                 console.log(response['data'])
-                this.setState({ interest: response['data'] })
+                if (response['data'] == 'Invalid interest type') {
+                    window.alert('Invalid interest type')
+                } else if (response['data'] == 'Invalid input type') {
+                    window.alert('Invalid value type')
+                } 
+                 else {
+                    this.setState({ interest: response['data'] })
+                }
             })
             .catch(error => {
                 console.log(error)
@@ -104,11 +111,12 @@ class PostForm extends Component {
                     
                     <form onSubmit={this.submitHandler} className="label">
                         <h1 className="header">Interest Calculator</h1>
+                        {/* <div>Simple interest is calculated only on the principal amount, or on that portion of the principal amount that remains. It excludes the effect of compounding. Simple interest can be applied over a time period other than a year, for example, every month.</div> */}
                         <label className="label">Deposit:</label>
                         <input type="text" name="p" value={p} onChange={this.changeHandler} style={{ width: '300px' }} />
-                        <label className="label">Interest Rate:</label>
+                        <label className="label">Interest Rate: (Percentage, %)</label>
                         <input type="text" name="r" value={r} onChange={this.changeHandler} style={{ width: '300px' }} />
-                        <label className="label">Deposit Time:</label>
+                        <label className="label">Deposit Time: (Year)</label>
                         <input type="text" name="t" value={t} onChange={this.changeHandler} style={{ width: '300px' }} />
                         <label className="label">Deposit Type:</label>
                         <input type="text" name="type" value={type} onChange={this.changeHandler} style={{ width: '300px' }} />

@@ -30,12 +30,18 @@ def postForm():
 def calculate_interest():
     request_data = json.loads(request.data)
     # Get the request parameters
-    p = float(request_data['p'])
-    r = float(request_data['r'])
-    t = float(request_data['t'])
+    try:
+        p = float(request_data['p'])
+        r = float(request_data['r'])
+        t = float(request_data['t'])
+    except:
+        return 'Invalid input type'
+    
+    if (p < 0.0 or r < 0.0 or t < 0.0):
+        return 'Invalid input type'       
+
     interest_type = request_data['type']
 
-    
     if interest_type == 'simple':
         result = functions.simple_interest(p, r, t)
     elif interest_type == 'compound':
